@@ -19,10 +19,10 @@ if(isset($message)){
       <a href="home.php" class="logo">
       <div class="container">
       <div class="image">
-        <img src="/images/logo3.png">
+        <img src="/images/book/logo1.png">
       </div>
       <div class="logo-name">
-        <h1>Tep's FishyFlex</h1>
+        <h1>BookLat</h1>
       </div>
     </div>
     </a>
@@ -31,7 +31,7 @@ if(isset($message)){
       <nav class="navbar">
          <a href="home.php">Home</a>
          <a href="about.php">About</a>
-         <a href="menu.php">Fishes</a>
+         <a href="menu.php">Books</a>
          <a href="orders.php">Orders</a>
          <a href="contact.php">Contact</a>
       </nav>
