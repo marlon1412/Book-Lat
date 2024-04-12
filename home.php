@@ -45,37 +45,38 @@ include 'components/add_cart.php';
 
          <div class="swiper-slide slide">
             <div class="content">
+            <h3>Welcome to<br> BOOKLAT!</h3>
                <span>
-                  "Dive into Delight: Tep's FishyFlex – Where Every Tank Tells a Tale of Aquatic Wonder!"
+                  " Where Stories Come to Life! Dive into endless imagination with our collection of books and rentals"
 
                </span>
-               <h3>Here at<br> Tep's FishyFlex</h3>
+               
                <a href="menu.php" class="btn">SHOP NOW</a>
             </div>
             <div class="image">
-               <img src="images/fish/orange-PhotoRoom.png-PhotoRoom.png" alt="">
+               <img src="images/book/hobbitnobg.png" alt="">
             </div>
          </div>
 
          <div class="swiper-slide slide">
             <div class="content">
-            <span>"Aquarium Dreams Begin Here: Tep's FishyFlex – Your Gateway to Vibrant Fish and Seamless Fishkeeping."</span>
-               <h3>Here at<br> Tep's FishyFlex</h3>
+            <span>"Every book is a journey waiting to be explored. <br> Discover, Explore, Read"</span>
+               <h3>Here at<br> BOOKLAT</h3>
                <a href="menu.php" class="btn">SHOP NOW</a>
             </div>
             <div class="image">
-               <img src="images/fish/fish1.png" alt="">
+               <img src="images/book/percy no bg.png" alt="">
             </div>
          </div>
 
          <div class="swiper-slide slide">
             <div class="content">
-            <span>"Unlock the Underwater Magic: Tep's FishyFlex – Turning Your Home into an Aquatic Paradise, One Fin at a Time!"</span>
-               <h3>Here at<br> Tep's FishyFlex</h3>
+            <span>"Keep turning the pages, for every chapter brings new wisdom and adventure."</span>
+               <h3>Enjoy<br> SHOPPING!</h3>
                <a href="menu.php" class="btn">SHOP NOW</a>
             </div>
             <div class="image">
-               <img src="images/fish/fish3.png" alt="">
+               <img src="images/book/got no bg.png" alt="">
             </div>
          </div>
 
@@ -95,23 +96,23 @@ include 'components/add_cart.php';
 
 <section class="category">
 
-   <h1 class="title">Store</h1>
+   <h1 class="title">Categories</h1>
 
    <div class="box-container">
 
       <a href="category.php?category=fast food" class="box">
-         <img src="images/fish/fish.png" alt="">
-         <h3>Fishes</h3>
+         <img src="images/book/rom-removebg-preview.png" alt="">
+         <h3>Romance</h3>
       </a>
 
       <a href="category.php?category=main dish" class="box">
-         <img src="images/fish/fish-tank.png" alt="">
-         <h3>Fish Products</h3>
+         <img src="images/book/mys-removebg-preview.png" alt="">
+         <h3>Mystery</h3>
       </a>
 
       <a href="category.php?category=drinks" class="box">
-         <img src="images/fish/fish-bowl.png" alt="">
-         <h3>Others</h3>
+         <img src="images/book/fan-removebg-preview.png" alt="">
+         <h3>Fantasy and Sci-Fi</h3>
       </a>
 
       <!-- <a href="category.php?category=desserts" class="box">

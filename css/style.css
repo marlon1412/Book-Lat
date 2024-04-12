@@ -7,7 +7,7 @@
    --black:#222;
    --light-color:#777;
    --border:.1rem solid var(--black);
-   --blue:#1874d2;
+   --blue:#481e14;
 
 }
 
@@ -181,11 +181,8 @@ section{
    position: sticky;
    top:0; left:0; right:0;
    z-index: 1000;
-   background: rgb(5,20,53);
-background: -moz-linear-gradient(90deg, rgba(5,20,53,1) 0%, rgba(28,48,103,1) 23%, rgba(43,65,129,1) 38%, rgba(36,59,148,1) 56%, rgba(20,33,101,1) 77%, rgba(20,18,39,1) 95%);
-background: -webkit-linear-gradient(90deg, rgba(5,20,53,1) 0%, rgba(28,48,103,1) 23%, rgba(43,65,129,1) 38%, rgba(36,59,148,1) 56%, rgba(20,33,101,1) 77%, rgba(20,18,39,1) 95%);
-background: linear-gradient(90deg, rgba(5,20,53,1) 0%, rgba(28,48,103,1) 23%, rgba(43,65,129,1) 38%, rgba(36,59,148,1) 56%, rgba(20,33,101,1) 77%, rgba(20,18,39,1) 95%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#051435",endColorstr="#141227",GradientType=1);
+   background-color: #481e14f1;
+
    /* border-bottom: var(--border); */
 }
 
@@ -285,7 +282,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#051435",endCo
    text-decoration: underline;
 }
 .hero{
-   background: url(/images/b3.jpg);
+   background: url(/images/book/Y2IG2DGCTBCUVFMG5RX32G5LNI.jpg);
    background-color: #0c0050;
    margin-bottom: 50px;
    height: 750px;
@@ -305,7 +302,15 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#051435",endCo
    flex-wrap: wrap-reverse;
    gap:2rem;
    margin-bottom: 4rem;
-  
+   background: rgba( 255, 255, 255, 0.1 );
+   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+   backdrop-filter: blur( 10.5px );
+   -webkit-backdrop-filter: blur( 10.5px );
+   border-radius: 10px;
+   border: 1px solid rgba( 255, 255, 255, 0.18 );
+   border-radius: 20px;
+      
+   
 }
 
 .hero .slide .image{
@@ -336,6 +341,9 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#051435",endCo
 
 .swiper-pagination-bullet-active{
    background-color: var(--white);
+   width: 15px; /* Adjust the width to make the bullet bigger */
+   height: 15px; /* Adjust the height to make the bullet bigger */
+   margin: 0 8px; /* Adjust the margin as needed */
 }
 .category{
    margin-bottom: 50px;
@@ -369,7 +377,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#051435",endCo
 }
 
 .category .box-container .box:hover{
-   background-color:#0c0050;
+   background-color:#481e14;
 }
 
 .category .box-container .box:hover img{
