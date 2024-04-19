@@ -85,11 +85,12 @@ include 'components/add_cart.php';
       <div class="swiper-pagination"></div>
 
    </div>
-   <div class="custom-shape-divider-bottom-1703130731">
+   <div class="custom-shape-divider-bottom-1713541612">
     <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+        <path d="M1200,0H0V120H281.94C572.9,116.24,602.45,3.86,602.45,3.86h0S632,116.24,923,120h277Z" class="shape-fill"></path>
     </svg>
 </div>
+<div class="torn"></div>
 
 </section>
 
@@ -133,14 +134,14 @@ include 'components/add_cart.php';
         <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
     </svg>
 </div>
-<div class="custom-shape-divider-top-1703135017">
+<!-- <div class="custom-shape-divider-top-1703135017">
     <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
         <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
     </svg>
-</div>
+</div> -->
    
 
-   <h1 class="title">Latest in Shop</h1>
+   <h1 class="title">Latest in our Shop</h1>
 
    <div class="box-container">
 
@@ -185,18 +186,15 @@ include 'components/add_cart.php';
    <div class="row">
 
       <div class="image">
-         <img src="/images/fish/fish2.png" alt="">
+         <img src="/images/book/Reading book.png" alt="">
       </div>
 
       <div class="content">
          <h3>Why choose us?</h3>
          <p>
-            Welcome to Tep's FishyFlex, where our love for aquatic life meets your passion for fishkeeping! 
-            At Tep's, we're not just a pet shop; we're a community of dedicated fish enthusiasts committed to providing you with a top-notch experience. With a team of knowledgeable experts, 
-            we ensure the health and happiness of every fish we offer. 
-            Dive into a sea of possibilities with our wide selection of vibrant fish species and high-quality aquarium supplies. 
-            What sets us apart is our customer-centric approach—we're here to assist whether you're a seasoned aquarium enthusiast or a first-time fish owner. Join our community, share experiences, and let 
-            Tep's FishyFlex be your trusted partner in creating the perfect underwater haven. Thank you for choosing Tep's FishyFlex, where passion and expertise come together for an immersive aquatic journey!
+         Welcome to BookLat, your premier online destination for all things books! At BookLat, we're passionate about literature and committed to bringing you an unparalleled reading experience. With an extensive collection spanning diverse genres, from beloved classics to the latest bestsellers, there's something for every reader to explore. What sets us apart? Our innovative rental feature offers affordability and flexibility, allowing you to enjoy your favorite titles without the commitment of a full purchase. But BookLat is more than just a bookstore; it's a vibrant community of book enthusiasts. Join us to share recommendations, engage in discussions, and connect with fellow readers who share your passion. From seamless checkout to prompt customer support, our dedicated team is here to ensure your satisfaction every step of the way. Discover the joy of reading anew with BookLat, where every page turns into an adventure!
+
+
          </p>
          <a href="menu.php" class="btn">Our Fishes</a>
       </div>
@@ -211,7 +209,7 @@ include 'components/add_cart.php';
 
    <div class="mapouter">
       <div class="gmap_canvas">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d369.6121776503232!2d123.7322631882893!3d13.358011154350455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a1ad5cb167bacb%3A0x8cbc069416047daa!2sBaby%20Jane%20Animalandia!5e1!3m2!1sen!2sph!4v1701938808221!5m2!1sen!2sph" 
+          <iframe src="https://maps.google.com/maps?hl=en&amp;q=bicol university&amp;t=k&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
              style="width: 580px; height: 550px; border-radius: 25px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
           </iframe>
       </div>
