@@ -8,7 +8,7 @@
         <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
     </svg>
 </div>
-
+<div class="glass">
         <div class="footer-left">
           
   
@@ -21,7 +21,7 @@
             
             <a href="about.php"><i class="fa-solid fa-address-card"></i> About</a>
             
-            <a href="menu.php"><i class="fa-solid fa-fish-fins"></i> Fish</a>
+            <a href="menu.php"><i class="fa-solid fa-book"></i> Store</a>
           
             <a href="contact.php"><i class="fa-solid fa-square-phone"></i> Contact</a>
             
@@ -36,17 +36,17 @@
   
           <div>
             <i class="fa-solid fa-map-location-dot"></i>
-            <p><span>9P5J+6X7,</span>  Tabaco City, Albay</p>
+            <p><span>4PVF+P7J,</span>  Legazpi City, Albay, Philippines</p>
           </div>
   
           <div>
             <i class="fa fa-phone"></i>
-            <p>+63 912 635 8253</p>
+            <p>+63 909 123 456</p>
           </div>
   
           <div>
             <i class="fa fa-envelope"></i>
-            <p><a href="mailto:markjosephbraga@gmail.com">Email:markjosephbraga@gmail.com</a></p>
+            <p><a href="mailto:booklat@gmail.com">Email:booklat@gmail.com</a></p>
           </div>
   
         </div>
@@ -69,9 +69,9 @@
         </div>
         <div class="divi">    
               <hr>
-          <p class="footer--name">All rights reserved  © Copyright 2023 </p>
+          <p class="footer--name">All rights reserved  © Copyright 2024 </p>
   </div>
-  
+  </div>
       </footer>
 
 <!-- <div class="loader">

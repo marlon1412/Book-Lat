@@ -114,6 +114,7 @@ section{
    background-color: var(--blue);
    color:var(--white);
    border-radius: 25px;
+   border: 1px solid white;
 }
 
 .delete-btn{
@@ -285,7 +286,7 @@ section{
    background: url(/images/book/Y2IG2DGCTBCUVFMG5RX32G5LNI.jpg);
    background-color: #0c0050;
    margin-bottom: 50px;
-   height: 750px;
+   height: 850px;
    width: 100%;
    background-position: center;
    background-repeat: no-repeat;
@@ -388,7 +389,7 @@ section{
    color:var(--white);
 }
 .products{
-background: url(/images/fish/under2.jpg);
+background: url(/images/book/bg2.png);
    background-color: #0c0050;
    height: 100%;
    min-height: 900px;
@@ -1291,22 +1292,33 @@ border: 1px solid rgba(255,255,255,0.15);
 	width: 100%;
 	text-align: left;
 	font: bold 16px;
-	padding: 20px 50px 0;
+	padding: 40px 50px 0;
    height: 100%;
-	min-height: 250px;
+	min-height: 290px;
   
-   background: url(/images/fish/pxfuel.jpg);
-   background-color: #0c0050;
-   
+   background: url(/images/book/footnobg.png);
+   background-color: #EEE4B1;
    background-position: center;
-   background-repeat: no-repeat;
-   background-size: cover;
+   background-repeat:repeat-x;
+ 
    position: relative;
+
+   
 
 	
 	
 	
 	
+}
+.glass{
+ 
+   background: rgba( 255, 255, 255, 0.25 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+
 }
 
 .footer-distributed .footer-left,
@@ -1314,6 +1326,7 @@ border: 1px solid rgba(255,255,255,0.15);
 .footer-distributed .footer-right{
 	display: inline-block;
 	vertical-align: top;
+   
 	
 }
 
@@ -1327,7 +1340,7 @@ border: 1px solid rgba(255,255,255,0.15);
 /* Footer links */
 
 .footer-distributed .footer-links{
-	color:  #020202;
+	color:  #1f1d1d;
 	margin: 0px 0 12px 20px;
 	padding: 0;
 	
@@ -1336,7 +1349,7 @@ border: 1px solid rgba(255,255,255,0.15);
 .footer-distributed .footer-links a{
 	display:block;
 	line-height: 1.8;
-     font-weight:400;
+     font-weight:500;
 	text-decoration: none;
 	color:  inherit;
 	font-size: 15px;
@@ -1461,7 +1474,7 @@ border: 1px solid rgba(255,255,255,0.15);
 	color: #000000;
 }
 .footer-distributed .footer--name{
-	color:  #ffffff;
+	color:  #161515;
 	font-size: 14px;
 	font-weight: normal;
 	margin: 10px;
@@ -1628,3 +1641,24 @@ border: 1px solid rgba(255,255,255,0.15);
 .custom-shape-divider-top-1703229176 .shape-fill {
    fill: #FFFFFF;
 }
+.custom-shape-divider-bottom-1713541612 {
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   overflow: hidden;
+   line-height: 0;
+   transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1713541612 svg {
+   position: relative;
+   display: block;
+   width: calc(100% + 1.3px);
+   height: 83px;
+}
+
+.custom-shape-divider-bottom-1713541612 .shape-fill {
+   fill: #FFFFFF;
+}
+ 
