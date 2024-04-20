@@ -63,24 +63,21 @@ section{
    text-transform: uppercase;
 }
 
-.heading{
+.heading {
    display: flex;
    align-items: center;
    justify-content: center;
-   gap:1rem;
+   gap: 1rem;
    flex-flow: column;
-   background: rgb(5,20,53);
-   background: -moz-linear-gradient(90deg, rgba(5,20,53,1) 0%, rgba(28,48,103,1) 23%, rgba(43,65,129,1) 38%, rgba(36,59,148,1) 56%, rgba(20,33,101,1) 77%, rgba(20,18,39,1) 95%);
-   background: -webkit-linear-gradient(90deg, rgba(5,20,53,1) 0%, rgba(28,48,103,1) 23%, rgba(43,65,129,1) 38%, rgba(36,59,148,1) 56%, rgba(20,33,101,1) 77%, rgba(20,18,39,1) 95%);
-   background: linear-gradient(90deg, rgba(5,20,53,1) 0%, rgba(28,48,103,1) 23%, rgba(43,65,129,1) 38%, rgba(36,59,148,1) 56%, rgba(20,33,101,1) 77%, rgba(20,18,39,1) 95%);
-   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#051435",endColorstr="#141227",GradientType=1);
+   background: url('/images/book/bg5.jpg') no-repeat center center/cover; /* Change 'your-image-url.jpg' to the URL of your image */
+   background-size: 100%;
    min-height: 20rem;
    position: relative;
    height: 500px;
 }
    
 .heading h3{
-   font-size: 5rem;
+   font-size: 7rem;
    color:var(--white);
    text-transform: capitalize;
 }
@@ -341,7 +338,7 @@ section{
   
 
 .swiper-pagination-bullet-active{
-   background-color: var(--white);
+   background-color: var(--blue);
    width: 15px; /* Adjust the width to make the bullet bigger */
    height: 15px; /* Adjust the height to make the bullet bigger */
    margin: 0 8px; /* Adjust the margin as needed */
@@ -625,7 +622,7 @@ border: 1px solid rgba(255,255,255,0.075);
    color:var(--light-color);
 }
 .steps{
-   margin-top: 100px;
+   margin-top: 80px;
    margin-bottom: 100px;
    
 }
@@ -665,6 +662,7 @@ border: 1px solid rgba(255,255,255,0.075);
 .reviews{
    margin-bottom: 50px;
 }
+
 .reviews .slide{
    margin-bottom: 4rem;
    border:var(--border);
