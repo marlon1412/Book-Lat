@@ -80,7 +80,7 @@ if(isset($_POST['send'])){
 
    <div class="mapouter">
       <div class="gmap_canvas">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d369.6121776503232!2d123.7322631882893!3d13.358011154350455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a1ad5cb167bacb%3A0x8cbc069416047daa!2sBaby%20Jane%20Animalandia!5e1!3m2!1sen!2sph!4v1701938808221!5m2!1sen!2sph" 
+      <iframe src="https://maps.google.com/maps?hl=en&amp;q=bicol university&amp;t=k&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
              style="width: 580px; height: 550px; border-radius: 25px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
           </iframe>
       </div>
