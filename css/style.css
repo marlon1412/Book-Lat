@@ -74,6 +74,17 @@ section{
    min-height: 20rem;
    position: relative;
    height: 500px;
+   z-index: 1; /* Ensure the heading stays above the torn effect */
+}
+.heading::after {
+   content: '';
+   position: absolute;
+   top: 92%; /* Position it just below the heading */
+   left: 0;
+   width: 100%; /* Cover the entire width of the container */
+   height: 60px; /* Adjust this height according to your torn image */
+   background: url(/images/book/torn-removebg.png) repeat-x center; /* Use your torn image */
+   z-index: -1; /* Position it behind other content */
 }
    
 .heading h3{
@@ -345,6 +356,19 @@ section{
 }
 .category{
    margin-bottom: 50px;
+   position: relative;
+   z-index: 1; /* Ensure the category section stays above the torn effect */
+}
+
+.category::after {
+   content: '';
+   position: absolute;
+   top: 102%; /* Position it just below the category section */
+   left: 0;
+   width: 100%; /* Cover the entire width of the container */
+   height: 60px; /* Adjust this height according to your torn image */
+   background: url(/images/book/torn-removebg.png) repeat-x center; /* Use your torn image */
+   z-index: -1; /* Position it behind other content */
 }
 
 .category .box-container{
@@ -901,6 +925,17 @@ border: 1px solid rgba(255,255,255,0.1);
 .orders .box-container .box p span{
    color:var(--black);
 }
+.form-container{
+   background: url(/images/book/bg\ 4.png);
+   background-color: #0c0050;
+   padding-bottom:100px;
+   height: 100%;
+   width: 100%;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   position: relative;
+}
 
 .form-container form{
    border:var(--border);
@@ -909,11 +944,15 @@ border: 1px solid rgba(255,255,255,0.1);
    padding:2rem;
    text-align: center;
    border-radius: 25px;
+   background: rgba(255,255,255,0.2);
+-webkit-backdrop-filter: blur(9px);
+backdrop-filter: blur(9px);
+border: 1px solid rgba(255,255,255,0.1);
 }
 
 .form-container form h3{
    font-size: 2.5rem;
-   color:var(--black);
+   color:var(--white);
    text-transform: uppercase;
    margin-bottom: 1rem;
 }
@@ -942,7 +981,7 @@ border: 1px solid rgba(255,255,255,0.1);
 }
 
 .user-details{
-   background: url(/images/fish/under4.jpg);
+   background: url(/images/book/bg\ 4.png);
    background-color: #0c0050;
    padding-bottom:100px;
    height: 100%;
@@ -990,7 +1029,7 @@ border: 1px solid rgba(255,255,255,0.1);
    margin-top: 1rem;
 }
 .quick-view{
-   background: url(/images/fish/aq.jpg);
+   background: url(/images/book/bg2.png);
    background-color: #0c0050;
    padding-bottom:100px;
    height: 100%;
@@ -1293,19 +1332,11 @@ border: 1px solid rgba(255,255,255,0.15);
 	padding: 40px 50px 0;
    height: 100%;
 	min-height: 290px;
-  
    background: url(/images/book/footnobg.png);
    background-color: #EEE4B1;
    background-position: center;
    background-repeat:repeat-x;
- 
    position: relative;
-
-   
-
-	
-	
-	
 	
 }
 .glass{
