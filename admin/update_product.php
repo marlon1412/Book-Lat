@@ -16,13 +16,17 @@ if(isset($_POST['update'])){
    $pid = filter_var($pid, FILTER_SANITIZE_STRING);
    $name = $_POST['name'];
    $name = filter_var($name, FILTER_SANITIZE_STRING);
+   $oldPrice = $_POST['oldPrice'];
+   $oldPrice = filter_var($oldPrice, FILTER_SANITIZE_STRING);
    $price = $_POST['price'];
    $price = filter_var($price, FILTER_SANITIZE_STRING);
    $category = $_POST['category'];
    $category = filter_var($category, FILTER_SANITIZE_STRING);
+   $description = $_POST['description'];
+   $description = filter_var($description, FILTER_SANITIZE_STRING);
 
-   $update_product = $conn->prepare("UPDATE `products` SET name = ?, category = ?, price = ? WHERE id = ?");
-   $update_product->execute([$name, $category, $price, $pid]);
+   $update_product = $conn->prepare("UPDATE `products` SET name = ?, category = ?, oldPrice = ?, price = ? , description = ? WHERE id = ?");
+   $update_product->execute([$name, $category, $price, $oldPrice,$description, $pid]);
 
    $message[] = 'product updated!';
 
@@ -87,7 +91,11 @@ if(isset($_POST['update'])){
       <img src="../uploaded_img/<?= $fetch_products['image']; ?>" alt="">
       <span>update name</span>
       <input type="text" required placeholder="enter product name" name="name" maxlength="100" class="box" value="<?= $fetch_products['name']; ?>">
+      <span>update old price</span>
+      <input type="number" min="0" max="9999999999" required placeholder="enter product old price" name="oldPrice" onkeypress="if(this.value.length == 10) return false;" class="box" value="<?= $fetch_products['oldPrice']; ?>">
       <span>update price</span>
+      <span>update description</span>
+      <input type="text" required placeholder="enter product description" name="description" maxlength="100" class="box" value="<?= $fetch_products['description']; ?>">
       <input type="number" min="0" max="9999999999" required placeholder="enter product price" name="price" onkeypress="if(this.value.length == 10) return false;" class="box" value="<?= $fetch_products['price']; ?>">
       <span>update category</span>
       <select name="category" class="box" required>
