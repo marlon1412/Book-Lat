@@ -186,7 +186,7 @@ if(isset($_SESSION['user_id'])){
          <div class="swiper-slide slide">
             <img src="images/pic-5.png" alt="">
             <p>
-            "Kudos to BookLat for a wonderful shopping experience! The customer service was top-notch, and the delivery was swift. I'll definitely be a returning customer."
+            "Kudos to BookLat for a wonderful shopping experience!!The customer service was top-notch, and the delivery was swift. I'll definitely be a returning customer."
             </p>
             <div class="stars">
                <i class="fas fa-star"></i>
