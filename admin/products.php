@@ -14,6 +14,10 @@ if(isset($_POST['add_product'])){
 
    $name = $_POST['name'];
    $name = filter_var($name, FILTER_SANITIZE_STRING);
+   $description = $_POST['description'];
+   $description = filter_var($description, FILTER_SANITIZE_STRING);
+   $oldPrice = $_POST['oldPrice'];
+   $oldPrice = filter_var($oldPrice, FILTER_SANITIZE_STRING);
    $price = $_POST['price'];
    $price = filter_var($price, FILTER_SANITIZE_STRING);
    $category = $_POST['category'];
@@ -36,8 +40,8 @@ if(isset($_POST['add_product'])){
       }else{
          move_uploaded_file($image_tmp_name, $image_folder);
 
-         $insert_product = $conn->prepare("INSERT INTO `products`(name, category, price, image) VALUES(?,?,?,?)");
-         $insert_product->execute([$name, $category, $price, $image]);
+         $insert_product = $conn->prepare("INSERT INTO `products`(name, category, oldPrice, price, image, description) VALUES(?,?,?,?,?,?)");
+         $insert_product->execute([$name, $category, $oldPrice, $price, $image, $description]);
 
          $message[] = 'new product added!';
       }
@@ -89,6 +93,7 @@ if(isset($_GET['delete'])){
    <form action="" method="POST" enctype="multipart/form-data">
       <h3>add product</h3>
       <input type="text" required placeholder="enter product name" name="name" maxlength="100" class="box">
+      <input type="number" min="0" max="9999999999" required placeholder="enter product old price" name="oldPrice" onkeypress="if(this.value.length == 10) return false;" class="box">
       <input type="number" min="0" max="9999999999" required placeholder="enter product price" name="price" onkeypress="if(this.value.length == 10) return false;" class="box">
       <select name="category" class="box" required>
          <option value="" disabled selected>select category --</option>
@@ -97,6 +102,7 @@ if(isset($_GET['delete'])){
          <option value="drinks">Others</option>
          <option value="desserts">Fish Food</option>
       </select>
+      <input type="text" required placeholder="enter product description" name="description" maxlength="100" class="box">
       <input type="file" name="image" class="box" accept="image/jpg, image/jpeg, image/png, image/webp" required>
       <input type="submit" value="add product" name="add_product" class="btn">
    </form>
@@ -120,9 +126,11 @@ if(isset($_GET['delete'])){
    <div class="box">
       <img src="../uploaded_img/<?= $fetch_products['image']; ?>" alt="">
       <div class="flex">
+      <div class="oldPrice"><span>$</span><?= $fetch_products['oldPrice']; ?><span>/-</span></div>
          <div class="price"><span>$</span><?= $fetch_products['price']; ?><span>/-</span></div>
          <div class="category"><?= $fetch_products['category']; ?></div>
       </div>
+      <div class="description"><?= $fetch_products['description']; ?></div>
       <div class="name"><?= $fetch_products['name']; ?></div>
       <div class="flex-btn">
          <a href="update_product.php?update=<?= $fetch_products['id']; ?>" class="option-btn">update</a>
