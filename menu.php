@@ -91,10 +91,10 @@ include 'components/add_cart.php';
                   </div>
                   <div class="row mt-3">
                      <div class="col-8">
-                        <button type="button" class="bg-success w-100 fs-1 text-white" data-bs-toggle="modal" data-bs-target="#rent<?= $fetch_products['id']; ?>">Rent</button>
+                        <button type="button" class="hover-rent text-uppercase connect w-100 text-center" data-bs-toggle="modal" data-bs-target="#rent<?= $fetch_products['id']; ?>">Rent</button>
                      </div>
                      <div class="col-4">
-                        <button type="submit" class="bg-primary w-100 fs-1 text-white" name="add_to_cart">Buy</button>
+                        <button type="submit" data-text="buy" class="button-one style-2 text-uppercase connect w-100" name="add_to_cart">Buy</button>
                      </div>
                   </div>
                </form>
@@ -171,6 +171,7 @@ include 'components/add_cart.php';
                                        <div class="col-12">
                                           <button type="submit" class="bg-primary w-100 fs-1 text-white" name="add_to_cart">Rent Now</button>
                                        </div>
+
                                     </div>
                                  </div>
                               </div>
