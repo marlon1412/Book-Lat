@@ -35,6 +35,9 @@ include 'components/add_cart.php';
    <!-- custom css file link  -->
    <link rel="stylesheet" href="css/style.css?v=<?php time() ?>">
 
+
+
+
 </head>
 
 <body>
@@ -134,44 +137,32 @@ include 'components/add_cart.php';
                                  </div>
                                  <div class="col-6">
                                     <div class="row">
-                                       <div class="col-6">
+                                       <div class="col-12">
                                           <div class="mb-3">
-                                             <label for="date1" class="form-label fs-3">Select Date</label>
-                                             <input type="date" class="form-control fs-3" id="date1">
-                                          </div>
-                                       </div>
-                                       <div class="col-6">
-                                          <div class="mb-3">
-                                             <label for="time1" class="form-label fs-3">Time</label>
-                                             <input type="time" class="form-control fs-3" id="time1">
+                                             <label for="date1" class="form-label fs-3">Start Date</label>
+                                             <input type="date" class="form-control fs-3" id="getDate1" oninput="handleDate1Change()" min="">
                                           </div>
                                        </div>
                                     </div>
-                                    <div class="row">
-                                       <div class="col-6">
+                                    <div class=" row">
+                                       <div class="col-12">
                                           <div class="mb-3">
-                                             <label for="date2" class="form-label fs-3">Select Date</label>
-                                             <input type="date" class="form-control fs-3" id="date2">
+                                             <label for="date2" class="form-label fs-3">End Date</label>
+                                             <input type="date" class="form-control fs-3" id="getDate2" oninput="handleDate2Change()" min="">
                                           </div>
                                        </div>
-                                       <div class="col-6">
-                                          <div class="mb-3">
-                                             <label for="time2" class="form-label fs-3">Time</label>
-                                             <input type="time" class="form-control fs-3" id="time2">
-                                          </div>
-                                       </div>
+
                                     </div>
                                     <div class="row">
                                        <div class="mb-3 mt-3">
                                           <label for="calculated_price" class="form-label fs-3">Calculated Price</label>
-                                          <input type="text" class="form-control fs-3" id="calculated_price" value="<?= $result['price']; ?>">
+                                          <input type="text" class="form-control fs-3" id="Bookprice" value="0" onchange="handlePriceChange()" readonly>
                                        </div>
                                     </div>
                                     <div class="row">
                                        <div class="col-12">
-                                          <button type="submit" class="bg-primary w-100 fs-1 text-white" name="add_to_cart">Rent Now</button>
+                                          <button type="submit" class="bg-primary w-100 fs-1 text-white" name="add_to_cart" id="rentNow">Rent Now</button>
                                        </div>
-
                                     </div>
                                  </div>
                               </div>
@@ -197,7 +188,63 @@ include 'components/add_cart.php';
    <!-- footer section starts  -->
    <?php include 'components/footer.php'; ?>
    <!-- footer section ends -->
-
 </body>
+
+<script>
+   document.getElementById("rentNow").disabled = true;
+
+   function handlePriceChange() {
+      // Your existing logic for calculating the price based on selected dates
+      var calculatedPrice = parseInt(document.getElementById("Bookprice").value);
+      var rentNowButton = document.getElementById("rentNow");
+      console.log(calculatedPrice);
+
+      if (calculatedPrice > 0) {
+         rentNowButton.disabled = false;
+      } else {
+         rentNowButton.disabled = true;
+      }
+   }
+
+   var today = new Date();
+   var dd = String(today.getDate()).padStart(2, "0");
+   var mm = String(today.getMonth() + 1).padStart(2, "0");
+   var yyyy = today.getFullYear();
+   today = yyyy + "-" + mm + "-" + dd;
+
+   document.getElementById("getDate1").setAttribute("min", today);
+   document.getElementById("getDate2").setAttribute("min", today);
+
+   function handleDate1Change() {
+      var selectedDate = document.getElementById("getDate1").value;
+      document.getElementById("getDate2").setAttribute("min", selectedDate);
+      updateTotalPrice();
+   }
+
+   function handleDate2Change() {
+      updateTotalPrice();
+   }
+
+   function updateTotalPrice() {
+      var startDate = new Date(document.getElementById("getDate1").value);
+      var endDate = new Date(document.getElementById("getDate2").value);
+
+      var timeDifference = endDate.getTime() - startDate.getTime();
+      var daysDifference = Math.ceil(timeDifference / (1000 * 3600 * 24));
+
+      var bookPrice = 20;
+      var additionalCostPerDay = 10;
+
+      var totalPrice = bookPrice + additionalCostPerDay * daysDifference;
+
+      if (isNaN(totalPrice) || totalPrice < 20) {
+         document.getElementById("Bookprice").value = 0;
+      } else {
+         document.getElementById("Bookprice").value = totalPrice;
+      }
+      handlePriceChange();
+   }
+</script>
+
 
 </html>
