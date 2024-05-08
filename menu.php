@@ -11,6 +11,7 @@ if (isset($_SESSION['user_id'])) {
 };
 
 include 'components/add_cart.php';
+include 'components/rent.php';
 
 ?>
 
@@ -57,13 +58,13 @@ include 'components/add_cart.php';
    </div>
    <!-- menu section starts  -->
 
-   <section class="products">
+   <section class="products m-0">
 
-      <div class="custom-shape-divider-bottom-1703130731">
+      <!-- <div class="custom-shape-divider-bottom-1703130731">
          <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
             <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
          </svg>
-      </div>
+      </div> -->
 
       <h1 class="title">Latest in the Shop</h1>
       <div class="box-container">
@@ -101,27 +102,28 @@ include 'components/add_cart.php';
                      </div>
                   </div>
                </form>
-
+               <?php
+               $pid = $fetch_products['id'];
+               $select_product = $conn->prepare("SELECT * FROM `products` WHERE `id` = :pid");
+               $select_product->bindParam(':pid', $pid);
+               $select_product->execute();
+               $result = $select_product->fetch(PDO::FETCH_ASSOC);
+               ?>
                <!-- Modal -->
                <div class="modal fade" id="rent<?= $fetch_products['id']; ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
                   <div class="modal-dialog modal-dialog-centered modal-lg">
-                     <div class="modal-content">
+                     <div class="modal-content" style="background-color: #e6e6e6;">
                         <div class="modal-header">
-                           <h1 class="modal-title text-black" id="exampleModalLabel">Modal title</h1>
+                           <h5 class="modal-title"><?= $result['name']; ?></h5>
                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="modal-body">
-                           <?php
-                           $pid = $fetch_products['id'];
-                           $select_product = $conn->prepare("SELECT * FROM `products` WHERE `id` = :pid");
-                           $select_product->bindParam(':pid', $pid);
-                           $select_product->execute();
-                           $result = $select_product->fetch(PDO::FETCH_ASSOC);
-                           ?>
-                           <form action="" method="post" class="box">
+                        <div class="modal-body p-3">
+
+                           <form action="" method="post" class="product">
                               <input type="hidden" name="pid" value="<?= $result['id']; ?>">
                               <input type="hidden" name="name" value="<?= $result['name']; ?>">
-                              <input type="hidden" name="price" value="<?= $result['price']; ?>">
+                              <input type="hidden" name="priceInput" value="">
                               <input type="hidden" name="image" value="<?= $result['image']; ?>">
                               <input type="hidden" name="qty" class="qty" min="1" max="99" value="1" maxlength="2">
                               <input type="hidden" name="status" value="Rent">
@@ -161,7 +163,7 @@ include 'components/add_cart.php';
                                     </div>
                                     <div class="row">
                                        <div class="col-12">
-                                          <button type="submit" class="bg-primary w-100 fs-1 text-white" name="add_to_cart" id="rentNow">Rent Now</button>
+                                          <button type="submit" class="hover-rent text-uppercase connect w-100 text-center" name="rent" id="rentNow">Rent Now</button>
                                        </div>
                                     </div>
                                  </div>
@@ -197,7 +199,6 @@ include 'components/add_cart.php';
       // Your existing logic for calculating the price based on selected dates
       var calculatedPrice = parseInt(document.getElementById("Bookprice").value);
       var rentNowButton = document.getElementById("rentNow");
-      console.log(calculatedPrice);
 
       if (calculatedPrice > 0) {
          rentNowButton.disabled = false;
@@ -228,6 +229,7 @@ include 'components/add_cart.php';
    function updateTotalPrice() {
       var startDate = new Date(document.getElementById("getDate1").value);
       var endDate = new Date(document.getElementById("getDate2").value);
+      var priceInput = document.querySelector('input[name="priceInput"]');
 
       var timeDifference = endDate.getTime() - startDate.getTime();
       var daysDifference = Math.ceil(timeDifference / (1000 * 3600 * 24));
@@ -241,6 +243,7 @@ include 'components/add_cart.php';
          document.getElementById("Bookprice").value = 0;
       } else {
          document.getElementById("Bookprice").value = totalPrice;
+         priceInput.value = totalPrice;
       }
       handlePriceChange();
    }
