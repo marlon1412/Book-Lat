@@ -21,11 +21,12 @@
   outline: none;
   border: none;
   text-decoration: none;
+ 
 }
 
 *::selection {
-  background-color: var(--yellow);
-  color: var(--black);
+  background-color: var(--blue);
+  color: var(--white);
 }
 
 ::-webkit-scrollbar {
@@ -79,26 +80,18 @@ section {
   height: 500px;
   z-index: 1; /* Ensure the heading stays above the torn effect */
 }
-.heading::after {
-  content: "";
-  position: absolute;
-  top: 92%; /* Position it just below the heading */
-  left: 0;
-  width: 100%; /* Cover the entire width of the container */
-  height: 60px; /* Adjust this height according to your torn image */
-  background: url(/images/book/torn-removebg.png) repeat-x center; /* Use your torn image */
-  z-index: -1; /* Position it behind other content */
-}
 
 .heading h3 {
   font-size: 7rem;
   color: var(--white);
   text-transform: capitalize;
+
 }
 
 .heading p {
   font-size: 2.3rem;
   color: var(--white);
+  text-decoration: none;
 }
 
 .heading p a {
@@ -298,7 +291,7 @@ section {
   color: var(--yellow);
   text-decoration: underline;
 }
-.hero {
+.hero1 {
   background: url(/images/book/Y2IG2DGCTBCUVFMG5RX32G5LNI.jpg);
   margin-bottom: 10px;
   width: 100%;
@@ -309,7 +302,7 @@ section {
   background-color: var(--light-color);
 }
 
-.hero .slide {
+.hero1 .slide {
   display: flex;
   align-items: center;
   flex-wrap: wrap-reverse;
@@ -324,25 +317,25 @@ section {
   border-radius: 20px;
 }
 
-.hero .slide .image {
+.hero1 .slide .image {
   flex: 1 1 40rem;
 }
 
-.hero .slide .image img {
+.hero1 .slide .image img {
   width: 100%;
 }
 
-.hero .slide .content {
+.hero1 .slide .content {
   flex: 1 1 40rem;
   text-align: center;
 }
 
-.hero .slide .content span {
+.hero1 .slide .content span {
   font-size: 2.5rem;
   color: var(--black);
 }
 
-.hero .slide .content h3 {
+.hero1 .slide .content h3 {
   margin: 1rem 0;
   font-size: 6rem;
   color: var(--black);
@@ -362,16 +355,6 @@ section {
   transition: ease-in-out 0.5s;
 }
 
-.category::after {
-  content: "";
-  position: absolute;
-  top: 102%; /* Position it just below the category section */
-  left: 0;
-  width: 100%; /* Cover the entire width of the container */
-  height: 60px; /* Adjust this height according to your torn image */
-  background: url(/images/book/torn-removebg.png) repeat-x center; /* Use your torn image */
-  z-index: -1; /* Position it behind other content */
-}
 
 .category .box-container {
   display: grid;
@@ -730,7 +713,7 @@ section {
 .steps .box-container .box p {
   line-height: 2;
   font-size: 1.6rem;
-  color: var(--light-color);
+  color: var(--black);
 }
 .reviews {
   margin-bottom: 50px;
@@ -754,7 +737,7 @@ section {
   padding: 1.5rem 0;
   line-height: 2;
   font-size: 1.6rem;
-  color: var(--light-color);
+  color: var(--black);
 }
 
 .reviews .slide .stars {
@@ -1320,7 +1303,7 @@ table.cart-table-body tr td {
     font-size: 2rem;
   }
 
-  .hero .slide .content h3 {
+  .hero1 .slide .content h3 {
     font-size: 5rem;
   }
 
@@ -1848,6 +1831,10 @@ a {
   text-decoration: none;
 }
 
+
+/* BLOGS CSS */
+
+
 /* payment-details */
 .payment-details table {
   width: 100%;
@@ -1874,3 +1861,5 @@ a {
   color: #c87065;
   padding: 15px 30px 0;
 }
+
+
