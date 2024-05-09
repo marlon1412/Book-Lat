@@ -77,18 +77,19 @@ $grand_total = 0;
 
    <section class="">
       <div class="margin-wrapper">
-         <table class="cart-table-header connect mb-5">
+         <table class="cart-table-header connect mb-5 table table-dark table-striped-columns table-responsive">
             <thead>
-               <tr class="th-product">
-                  <th scope="col" class="py-3">Product</th>
-                  <th scope="col" class="py-3">Price</th>
-                  <th scope="col" class="py-3">Quantity</th>
-                  <th scope="col" class="py-3">Total</th>
-                  <th scope="col" class="py-3">Remove</th>
+               <tr class="">
+                  <th scope="col" class="py-3" style="width: 16%;">Product</th>
+                  <th scope="col" class="py-3" style="width: 16%;">Price</th>
+                  <th scope="col" class="py-3" style="width: 16%;">Quantity</th>
+                  <th scope="col" class="py-3" style="width: 16%;">Total</th>
+                  <th scope="col" class="py-3" style="width: 16%;">Status</th>
+                  <th scope="col" class="py-3" style="width: 16%;">Remove</th>
                </tr>
             </thead>
          </table>
-         <table class="cart-table-body connect">
+         <table class="cart-table-header connect mb-5 table-responsive">
             <tbody>
                <?php
                $grand_total = 0;
@@ -101,7 +102,7 @@ $grand_total = 0;
                         <input type="hidden" name="cart_id" value="<?= $fetch_cart['id']; ?>">
                         <!-- <a href="quick_view.php?pid=<?= $fetch_cart['pid']; ?>" class="fas fa-eye"></a> -->
                         <tr>
-                           <td class="py-3">
+                           <td scope="col" class="py-3" style="width: 16%;">
                               <div class="product">
                                  <div class="flex-cart">
                                     <div class="wrapper-cart">
@@ -109,22 +110,21 @@ $grand_total = 0;
                                     </div>
                                     <div class="name"><?= $fetch_cart['name']; ?></div>
                                  </div>
-
                               </div>
                            </td>
-                           <td>
+                           <td scope="col" class="py-3" style="width: 16%;">
                               <div class="price"><span>₱</span><?= $fetch_cart['price']; ?></div>
                            </td>
-                           <td>
-                              <input type="number" name="qty" class="qty" min="1" max="99" value="<?= $fetch_cart['quantity']; ?>" maxlength="2">
+                           <td scope="col" class="py-3" style="width: 16%;"><input type="number" name="qty" class="qty" min="1" max="99" value="<?= $fetch_cart['quantity']; ?>" maxlength="2">
                               <button type="submit" class="fas fa-edit" name="update_qty"></button>
                            </td>
-                           <td>
+                           <td scope="col" class="py-3" style="width: 16%;">
                               <div class="sub-total"> <span>₱<?= $sub_total = ($fetch_cart['price'] * $fetch_cart['quantity']); ?></span> </div>
                            </td>
-                           <td>
-                              <button type="submit" class="fas fa-times" name="delete" onclick="return confirm('delete this item?');"></button>
+                           <td scope="col" class="py-3" style="width: 16%;">
+                              <div class="price"><?= $fetch_cart['status']; ?></div>
                            </td>
+                           <td scope="col" class="py-3" style="width: 16%;"><button type="submit" class="fas fa-times bg-danger p-3" name="delete" onclick="return confirm('delete this item?');"></button></td>
                         </tr>
                      </form>
                <?php
