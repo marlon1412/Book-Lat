@@ -43,7 +43,7 @@ include 'components/add_cart.php';
 <body>
 
    <?php include 'components/user_header.php'; ?>
-   <section class="hero">
+   <section class="hero1">
       <div class="swiper hero-slider">
          <div class="swiper-wrapper">
             <div class="swiper-slide slide">
@@ -94,7 +94,7 @@ include 'components/add_cart.php';
             <path d="M1200,0H0V120H281.94C572.9,116.24,602.45,3.86,602.45,3.86h0S632,116.24,923,120h277Z" class="shape-fill"></path>
          </svg>
       </div> -->
-      <div class="torn"></div>
+      <!-- <div class="torn"></div> -->
    </section>
 
    <section class="category my-5">

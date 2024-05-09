@@ -35,6 +35,7 @@ if (isset($message)) {
          <a href="menu.php">Books</a>
          <a href="orders.php">Orders</a>
          <a href="contact.php">Contact</a>
+         <a href="blogs.php">Blogs</a>
       </nav>
 
       <div class="icons">
